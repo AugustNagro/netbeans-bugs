@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello world</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <template id="my-paragraph">
+      <style>
+        p {
+          color: white;
+          background-color: #666;
+          padding: 5px;
+        }
+      </style>
+
+      <!--This p is highlighted red-->
+      <p>
+        Product Version: Apache NetBeans IDE 12.2
+        Java: 15.0.1; OpenJDK 64-Bit Server VM 15.0.1+9-18
+        Runtime: OpenJDK Runtime Environment 15.0.1+9-18
+        System: Linux version 5.9.16-200.fc33.x86_64 running on amd64; UTF-8; en_US (nb)
+        User directory: /home/user/.netbeans/12.2
+        Cache directory: /home/user/.cache/netbeans/12.2
+      </p>
+    </template>
+
+  </head>
+  <body>
+
+    <script>
+      let myParagraph = document.getElementById('my-paragraph').content.cloneNode(true);
+      document.body.appendChild(myParagraph);
+    </script>
+
+  </body>
+</html>
